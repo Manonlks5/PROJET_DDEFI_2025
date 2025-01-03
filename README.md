@@ -59,7 +59,3 @@ Ce projet vise à prédire les prix et rendements des actifs du S&P 500 en utili
 
 ---
 
-## Instructions pour Exécution
-1. Clonez ce dépôt Git :
-   ```bash
-   git clone https://github.com/votre_repo.git
