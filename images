@@ -1,4 +1,4 @@
-git add images/graphe_REGLINEAIRE.png
+git add images/C:\graphe_REGLINEAIRE.png
 git commit -m "Ajout du graphe de régression linéaire"
 git push origin main
 
