@@ -28,7 +28,7 @@ Ce projet vise à prédire les prix et rendements des actifs du S&P 500 en utili
   - **MAE :** 0.0076
   - **RMSE :** 0.0099
 - **Visualisation :**
-  ![Régression linéaire](C:\graphe_REGLINEAIRE.png)
+ 
 
 #### Modèle 2 : ARIMA
 - **Description :** Modèle ARIMA pour capturer les dépendances temporelles des séries stationnaires.
@@ -38,7 +38,7 @@ Ce projet vise à prédire les prix et rendements des actifs du S&P 500 en utili
   - **RMSE :** 0.0099
   - **Précision directionnelle :** 46.36%
 - **Visualisation :**
-  ![Modèle ARIMA](C:\graphe_ARIMA.png)
+
 
 ### 3. Méthodologie
 #### Entraînement et Validation
