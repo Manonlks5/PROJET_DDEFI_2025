@@ -111,12 +111,5 @@ Les graphiques suivants montrent que :
 - Tester des modèles plus complexes tels que les GARCH pour la volatilité ou des modèles de deep learning.
 - Intégrer davantage de données externes (macroéconomiques, sectorielles) pour améliorer la robustesse des prédictions.
 
-## Installation
-
-Clonez ce repository :
-
-```bash
-git clone https://github.com/username/repository_name.git
-
 
 
