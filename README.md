@@ -28,7 +28,7 @@ Ce projet vise à prédire les prix et rendements des actifs du S&P 500 en utili
   - **MAE :** 0.0076
   - **RMSE :** 0.0099
 - **Visualisation :**
-  
+  ![Régression linéaire](graphe_REGLINEAIRE.png)
  
 
 #### Modèle 2 : ARIMA
