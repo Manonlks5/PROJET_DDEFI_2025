@@ -61,6 +61,7 @@ Voici l'excel où est stocké la récupération des données. Nous avons pris su
   - **RMSE :** 0.0099
   - **Précision directionnelle :** 46.36%
 - **Visualisation :**
+ ![ACF et PACF](Test_ARIMA.png)
  ![ARIMA](graphe_ARIMA.png)
 
 ### 3. Méthodologie
