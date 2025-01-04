@@ -103,7 +103,7 @@ Les graphiques suivants montrent que :
 #### Visualisation
 - **Répartition des erreurs des deux modèles**.
    - Pour le modèle de Regréssion linéaire :
-     ![Erreurs absolues Reg Linéaire](erreurs_absolues_reg_linéaire.png)
+     ![Erreurs absolues Reg Linéaire](erreurs_absolues_linéaire.png)
 - **Superposition des prédictions avec les données réelles**. ( cf les deux graphes précédents où il y a la superpostion des prédictions avec les données réelles pour les deux modèles utilisés) 
 
 ## 2. Discussion sur les Erreurs Courantes
