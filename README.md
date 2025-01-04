@@ -46,6 +46,7 @@ Voici l'excel où est stocké la récupération des données. Nous avons pris su
 ### 2. Modèles Implémentés
 #### Modèle 1 : Régression Linéaire
 - **Description :** Modèle simple pour prédire les rendements en fonction des indicateurs techniques.
+- **Meilleur ordre :** ARIMA(0,0,2), cela signifie aucune dépendance autorégressive et différenciation, et le modèle utilise les erreurs de prévision des deux périodes précédentes pour ajuster les prédictions actuelles. Avec AIC: -8848.169579904614 qui est très faible ce qui nous montre que ce modèle est le meilleur compromis parmi les modèles testés.
 - **Résultats :**
   - **MAE :** 0.0076
   - **RMSE :** 0.0099
@@ -55,7 +56,6 @@ Voici l'excel où est stocké la récupération des données. Nous avons pris su
 
 #### Modèle 2 : ARIMA
 - **Description :** Modèle ARIMA pour capturer les dépendances temporelles des séries stationnaires.
-- **Ordre optimal :** (1, 1, 1) (après validation croisée).
 - **Résultats :**
   - **MAE :** 0.0076
   - **RMSE :** 0.0099
@@ -102,7 +102,9 @@ Les graphiques suivants montrent que :
 
 #### Visualisation
 - **Répartition des erreurs des deux modèles**.
-- **Superposition des prédictions avec les données réelles**. *(Insérez des graphiques ici)*
+   - Pour le modèle de Regréssion linéaire :
+     ![Erreurs absolues Reg Linéaire](graphe_REGLINEAIRE.png)
+- **Superposition des prédictions avec les données réelles**. ( cf les deux graphes précédents où il y a la superpostion des prédictions avec les données réelles pour les deux modèles utilisés) 
 
 ## 2. Discussion sur les Erreurs Courantes
 
