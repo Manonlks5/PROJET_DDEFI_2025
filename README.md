@@ -15,8 +15,14 @@ Ce projet vise à prédire les prix et rendements des actifs du S&P 500 en utili
 
 ### 1. Collecte et Préparation des Données
 - **Source des données :** Yahoo Finance (données historiques sur 5 ans).
+Voici l'excel où est stocké la récupération des données. Nous avons pris sur 6 ans afin d'avoir les données nécessaires pour réaliser les différents indicateurs se basant sur les données historiques comme le MACD, SMA_50 et SMA_100 :
+[📊 Télécharger le fichier Excel des résultats](https://github.com/username/repo/raw/main/resultats.xlsx)
+  
 - **Étapes réalisées :**
   - Nettoyage des données (gestion des valeurs manquantes et des doublons).
+    Voici l'excel où les données on été néttoyées :
+[📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fsp500_cleaned%2520(3).xlsx&wdOrigin=BROWSELINK)
+  
   - Transformation des prix en rendements logarithmiques.
   - Analyse de stationnarité avec le test ADF.
   - Création d'indicateurs techniques (Moyennes mobiles, RSI, MACD).
