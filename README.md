@@ -39,7 +39,7 @@ Ce projet vise à prédire les prix et rendements des actifs du S&P 500 en utili
   - **RMSE :** 0.0099
   - **Précision directionnelle :** 46.36%
 - **Visualisation :**
-
+ ![ARIMA](graphe_ARIMA.png)
 
 ### 3. Méthodologie
 #### Entraînement et Validation
