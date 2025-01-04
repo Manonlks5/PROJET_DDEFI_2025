@@ -37,10 +37,10 @@ Voici l'excel où est stocké la récupération des données. Nous avons pris su
     [📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fs%2526p500_with_indicators_2019%2520(1).xlsx&wdOrigin=BROWSELINK)
 
     
-    De plus, voici la matrice de corrélation entre les différents indicateurs :
+     - De plus, voici la matrice de corrélation entre les différents indicateurs :
     ![Matrice coorélation](Matrice_corrélation.png)
 
-    Enfin nous avons créé un nouveau excel avec les features sélectionnées :
+    - Enfin nous avons créé un nouveau excel avec les features sélectionnées :
      [📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fs%2526p500_selected_features_2019%2520(1).xlsx&wdOrigin=BROWSELINK)
   
 ### 2. Modèles Implémentés
