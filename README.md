@@ -104,6 +104,7 @@ Les graphiques suivants montrent que :
 - **Répartition des erreurs des deux modèles**.
    - Pour le modèle de Regréssion linéaire :
      ![Erreurs absolues Reg Linéaire](erreurs_absolues_linéaire.png)
+   - Pour le modèle ARIMA : 
 - **Superposition des prédictions avec les données réelles**. ( cf les deux graphes précédents où il y a la superpostion des prédictions avec les données réelles pour les deux modèles utilisés) 
 
 ## 2. Discussion sur les Erreurs Courantes
