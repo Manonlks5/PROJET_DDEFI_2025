@@ -19,14 +19,30 @@ Voici l'excel où est stocké la récupération des données. Nous avons pris su
 [📊 Télécharger le fichier Excel des résultats](https://github.com/username/repo/raw/main/resultats.xlsx)
   
 - **Étapes réalisées :**
+  
   - Nettoyage des données (gestion des valeurs manquantes et des doublons).
-    Voici l'excel où les données on été néttoyées :
+  - Transformation des prix en rendements logarithmiques.
+    Voici l'excel où les données on été néttoyées et les prix en rendements logarithmiques :
 [📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fsp500_cleaned%2520(3).xlsx&wdOrigin=BROWSELINK)
   
-  - Transformation des prix en rendements logarithmiques.
-  - Analyse de stationnarité avec le test ADF.
+  - Analyse de stationnarité avec le test ADF.(cf voir le code pyhton)
+    Résultats du test ADF :
+      - Test Statistic: -11.853423740881892. Cette valeur négative indique que la série des Log Returns a
+  une forte tendance a être stationnaire. 
+      - P-Value: 7.119616583190098e-22. P-value très faible car <0,05 indique que nous pouvons rejeter l'hypothèse nulle H0. 
+      - La série est stationnaire.
+  
   - Création d'indicateurs techniques (Moyennes mobiles, RSI, MACD).
+    Voici l'excel avec tous les différents indicateurs que nous avons créés.
+    [📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fs%2526p500_with_indicators_2019%2520(1).xlsx&wdOrigin=BROWSELINK)
 
+    
+    De plus, voici la matrice de corrélation entre les différents indicateurs :
+    ![Matrice coorélation](Matrice_corrélation.png)
+
+    Enfin nous avons créé un nouveau excel avec les features sélectionnées :
+     [📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fs%2526p500_selected_features_2019%2520(1).xlsx&wdOrigin=BROWSELINK)
+  
 ### 2. Modèles Implémentés
 #### Modèle 1 : Régression Linéaire
 - **Description :** Modèle simple pour prédire les rendements en fonction des indicateurs techniques.
