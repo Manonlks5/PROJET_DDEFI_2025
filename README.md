@@ -135,9 +135,6 @@ Les graphiques suivants montrent que :
 - **Basées sur l'ARIMA** : Privilégier des positions à moyen terme pour capter les tendances générales.
 - **Basées sur la régression linéaire** : Utiliser les prédictions comme un indicateur secondaire pour confirmer les signaux d'achat/vente générés par d'autres outils.
 
-#### Prochaines Étapes :
-- Tester des modèles plus complexes tels que les GARCH pour la volatilité ou des modèles de deep learning.
-- Intégrer davantage de données externes (macroéconomiques, sectorielles) pour améliorer la robustesse des prédictions.
 
 
 
