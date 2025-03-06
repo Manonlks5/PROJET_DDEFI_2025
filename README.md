@@ -1,4 +1,4 @@
-# 📊 DDEFI 2025 - Analyse de Sentiment et Prédiction du S&P 500 📈 - MARKETMIND
+# 📊 DDEFI 2025 - Analyse de Sentiment et Prédiction du S&P 500 📈 - TrendX
 
 ## 🔍 Contexte
 
@@ -6,7 +6,7 @@ Dans un marché financier en constante évolution, comprendre le sentiment des i
 Ce projet a pour but de créer un indice Fear & Greed basé sur des sources variées (actualités, Reddit, Google Trends, etc.) et de l’intégrer dans un modèle Machine Learning pour améliorer les prévisions du S&P 500.
 Cet indice a pour but de prévoir des mouvements de retournements potentiels du marché. En effet, une peur extrême indique souvent une sous-évaluation des actifs et donc des opportunités d'achat. Au contraire, une cupidité excessive suggère un marché suracheté et donc un potentiel retournement baissier. 
 
-💼 À qui s'adresse MarketMind ?
+💼 À qui s'adresse TrendX ?
 
 📌 Fonds d’investissement & Hedge Funds – Pour affiner leurs stratégies basées sur l'analyse de sentiment  
 📌 Traders indépendants & Analystes – Pour anticiper les tendances du S&P 500 grâce à l’IA  
