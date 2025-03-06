@@ -3,7 +3,8 @@
 ## 🔍 Contexte
 
 Dans un marché financier en constante évolution, comprendre le sentiment des investisseurs est crucial pour affiner la précision des modèles prédictifs.
-Ce projet a pour but de créer un indice Fear & Greed basé sur des sources variées (actualités, Twitter, Google Trends, etc.) et de l’intégrer dans un modèle Machine Learning pour améliorer les prévisions du S&P 500.
+Ce projet a pour but de créer un indice Fear & Greed basé sur des sources variées (actualités, Reddit, Google Trends, etc.) et de l’intégrer dans un modèle Machine Learning pour améliorer les prévisions du S&P 500.
+Cet indice a pour but de prévoir des mouvements de retournements potentiels du marché. En effet, une peur extrême indique souvent une sous-évaluation des actifs et donc des opportunités d'achat. Au contraire, une cupidité excessive suggère un marché suracheté et donc un potentiel retournement baissier. 
 
 🎯 Objectifs du Projet
 
@@ -25,25 +26,28 @@ YahooFinance API : Données historiques du S&P 500
 Macroéconomie : Indicateurs FRED API (inflation, taux d’intérêt, chômage)  
 
 📢 Données de sentiment
-
-Reddit API : Extraction des discussions financières sur r/wallstreetbets  
-Google Trends API : Volume de recherche pour des termes financiers  
-Actualités financières : Récupération via GDELT API  
-Twitter API (si possible) : Extraction des tweets mentionnant le S&P 500  
+ 
+Actualités financières : Récupération via GDELT API  ==> récupération de titres d'articles liés à l'actualité financière.       
+Google Trends API : Volume de recherche pour des termes financiers    
+Twitter API (si possible) : Extraction des tweets mentionnant le S&P 500, bloqués malheureusement il fallait payer pour    
+collecter les données.   
+Reddit API : Extraction des discussions financières sur r/wallstreetbets   
 
 📌 2. Extraction & Prétraitement des Données
 
 📥 Collecte
 
-Web Scraping pour récupérer des articles de presse et discussions Reddit  
-API Calls automatisés pour la récupération des tweets et des indicateurs économiques  
-Nettoyage des textes avec NLP (suppression des stopwords, stemming, lemmatisation)  
+Web Scraping pour récupérer des articles de presse ==> mots-clés : " S&P 500 " pour collecter les articles pouvant influencer son prix  
+Récupération uniquement des titres des articles et leurs liens url.    
+Nettoyage des textes avec NLP (suppression des stopwords, stemming, lemmatisation)    
 
 📊 Feature Engineering
 
-Analyse de sentiment NLP (classification des articles en positif, neutre ou négatif)  
-Agrégation journalière du score Fear & Greed  
-Fusion avec les données du S&P 500 pour créer un dataset prêt à être modélisé  
+Analyse de sentiment NLP : Scoring des titres d'articles pour créer notre index   
+Agrégation hebdomadaire du score Fear & Greed  
+Fusion avec les données du S&P 500 📥 [Télécharger le fichier Excel](https://github.com/votre-repo/votre-projet/blob/main/fichier.xlsx)
+pour créer un dataset prêt à être modélisé.
+Visualisation du prix du S&P500 avec le scoring créé.![Graphique du SP&500 et du scoring en fonction du temps](https://github.com/votre-repo/votre-image.png)  
 
 📌 3. Modélisation Machine Learning
 
