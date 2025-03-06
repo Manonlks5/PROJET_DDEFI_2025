@@ -74,6 +74,7 @@ Backtest sur des périodes historiques pour mesurer la fiabilité :
 
 On a d'abord essayé de corréler les log des rendements du S&P500 et le scoring sur 7 jours de nos titres d'articles afin d'entraîner notre modèle. XGBoost a donc construit des prédictions de baisse ou de hausse du S&P500 en se basant sur le passé. On a fait du 70-30. 
 
+
 Comparaison des performances avec et sans l’indice Fear & Greed  
 
 Visualisation des prédictions avec Matplotlib & Seaborn  
