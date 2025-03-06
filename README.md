@@ -67,28 +67,23 @@ Visualisation du prix du S&P500 avec le scoring créé.
 🛠️ Modèles testés :
 
 ✅ XGBoost (modèle performant pour les séries temporelles)  
-✅ LSTM (Deep Learning) (pour capturer les tendances complexes du marché)  
-✅ Régression linéaire (benchmark simple)  
-
+ 
 🎯 Évaluation des modèles
 
+Backtest sur des périodes historiques pour mesurer la fiabilité :    
+
+On a d'abord essayé de corréler les log des rendements du S&P500 et le scoring sur 7 jours de nos titres d'articles afin d'entraîner notre modèle. XGBoost a donc construit des prédictions de baisse ou de hausse du S&P500 en se basant sur le passé. On a fait du 70-30. 
+
 Comparaison des performances avec et sans l’indice Fear & Greed  
-Backtest sur des périodes historiques pour mesurer la fiabilité  
+
 Visualisation des prédictions avec Matplotlib & Seaborn  
 
-📌 4. Industrialisation & Déploiement
+📌 4. Déploiement et Conlusion
 
 🚀 Automatisation
 ✅ Pipeline de collecte et transformation des données (ETL)
 ✅ Mise à jour quotidienne des prédictions
 
-📦 Containerisation & API
-✅ Docker pour garantir la portabilité du projet
-✅ FastAPI pour exposer les prédictions sous forme d’API
-
-☁️ Déploiement Cloud
-✅ CI/CD avec GitHub Actions (tests et mise en production automatisés)
-✅ Déploiement sur AWS / GCP / Azure (accessible en ligne)
 
 📊 Résultats et Insights
 📌 Corrélation entre le sentiment et le S&P 500
