@@ -1,140 +1,79 @@
-# Prédiction des Prix et Actifs du S&P 500 avec Machine Learning
+# 📊 DDEFI 2025 - Analyse de Sentiment et Prédiction du S&P 500 📈
 
-## Contexte
-Ce projet vise à prédire les prix et rendements des actifs du S&P 500 en utilisant des modèles de machine learning. Le projet applique des techniques avancées d'analyse de séries temporelles, de modélisation prédictive et d'évaluation des performances. 
+## 🔍 Contexte
 
-## Objectifs
-1. Collecter et préparer les données financières (prix historiques, indicateurs macroéconomiques).
-2. Développer des modèles prédictifs en utilisant plusieurs algorithmes.
-3. Évaluer les performances des modèles avec des métriques standards.
-4. Interpréter les résultats pour proposer des recommandations d'investissement.
+Dans un marché financier en constante évolution, comprendre le sentiment des investisseurs est crucial pour affiner la précision des modèles prédictifs.
+Ce projet a pour but de créer un indice Fear & Greed basé sur des sources variées (actualités, Twitter, Google Trends, etc.) et de l’intégrer dans un modèle Machine Learning pour améliorer les prévisions du S&P 500.
+
+🎯 Objectifs du Projet
+
+✅ Développer un indice Fear & Greed personnalisé à partir de données d'actualités et de médias sociaux
+
+✅ Tester l’impact de cet indice sur la précision des modèles de prédiction du S&P 500
+
+✅ Automatiser la collecte et l’analyse des données à l’aide d’APIs et de pipelines de données
+
+✅ Industrialiser la solution via CI/CD, Docker, et Cloud Deployment
 
 ---
 
-## Structure du projet
+## 📌 1. Sources de Données
 
-### 1. Collecte et Préparation des Données
-- **Source des données :** Yahoo Finance (données historiques sur 5 ans).
-Voici l'excel où est stocké la récupération des données. Nous avons pris sur 6 ans afin d'avoir les données nécessaires pour réaliser les différents indicateurs se basant sur les données historiques comme le MACD, SMA_50 et SMA_100 :
-[📊 Télécharger le fichier Excel des résultats](https://github.com/username/repo/raw/main/resultats.xlsx)
-  
-- **Étapes réalisées :**
-  
-  - Nettoyage des données (gestion des valeurs manquantes et des doublons).
-  - Transformation des prix en rendements logarithmiques.
-    Voici l'excel où les données on été néttoyées et les prix en rendements logarithmiques :
-[📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fsp500_cleaned%2520(3).xlsx&wdOrigin=BROWSELINK)
-  
-  - Analyse de stationnarité avec le test ADF.(cf voir le code pyhton)
-    Résultats du test ADF :
-      - Test Statistic: -11.853423740881892. Cette valeur négative indique que la série des Log Returns a
-  une forte tendance a être stationnaire. 
-      - P-Value: 7.119616583190098e-22. P-value très faible car <0,05 indique que nous pouvons rejeter l'hypothèse nulle H0. 
-      - La série est stationnaire.
-  
-  - Création d'indicateurs techniques (Moyennes mobiles, RSI, MACD).
-    Voici l'excel avec tous les différents indicateurs que nous avons créés.
-    [📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fs%2526p500_with_indicators_2019%2520(1).xlsx&wdOrigin=BROWSELINK)
+📈 Données du marché  
 
-    
-     - De plus, voici la matrice de corrélation entre les différents indicateurs :
-    ![Matrice coorélation](Matrice_corrélation.png)
+YahooFinance API : Données historiques du S&P 500    
+Macroéconomie : Indicateurs FRED API (inflation, taux d’intérêt, chômage)  
 
-    - Enfin nous avons créé un nouveau excel avec les features sélectionnées :
-     [📊 Télécharger le fichier Excel des résultats](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FManonlks5%2FPROJET_DDEFI_2025%2Frefs%2Fheads%2Fmain%2Fs%2526p500_selected_features_2019%2520(1).xlsx&wdOrigin=BROWSELINK)
-  
-### 2. Modèles Implémentés
-#### Modèle 1 : Régression Linéaire
-- **Description :** Modèle simple pour prédire les rendements en fonction des indicateurs techniques.
-- **Meilleur ordre :** ARIMA(0,0,2), cela signifie aucune dépendance autorégressive et différenciation, et le modèle utilise les erreurs de prévision des deux périodes précédentes pour ajuster les prédictions actuelles. Avec AIC: -8848.169579904614 qui est très faible ce qui nous montre que ce modèle est le meilleur compromis parmi les modèles testés.
-- **Résultats :**
-  - **MAE :** 0.0076
-  - **RMSE :** 0.0099
-- **Visualisation :**
-  ![Régression linéaire](graphe_REGLINEAIRE.png)
- 
+📢 Données de sentiment
 
-#### Modèle 2 : ARIMA
-- **Description :** Modèle ARIMA pour capturer les dépendances temporelles des séries stationnaires.
-- **Résultats :**
-  - **MAE :** 0.0076
-  - **RMSE :** 0.0099
-  - **Précision directionnelle :** 46.36%
-- **Visualisation :**
- ![ACF et PACF](Test_ARIMA.png)
- ![ARIMA](graphe_ARIMA.png)
+Reddit API : Extraction des discussions financières sur r/wallstreetbets  
+Google Trends API : Volume de recherche pour des termes financiers  
+Actualités financières : Récupération via GDELT API  
+Twitter API (si possible) : Extraction des tweets mentionnant le S&P 500  
 
-### 3. Méthodologie
-#### Entraînement et Validation
-- **Partitionnement :** Données divisées en 80% pour l'entraînement et 20% pour le test.
-- **Validation croisée :** Validation par fenêtre glissante (rolling window).
+📌 2. Extraction & Prétraitement des Données
 
-#### Évaluation
-- **Métriques utilisées :**
-  - MAE (Mean Absolute Error)
-  - RMSE (Root Mean Squared Error)
-  - Précision directionnelle (hausse/baisse)
+📥 Collecte
 
-### 4. Analyse des Résultats
-# Analyse des Performances des Modèles de Prédiction des Rendements
+Web Scraping pour récupérer des articles de presse et discussions Reddit  
+API Calls automatisés pour la récupération des tweets et des indicateurs économiques  
+Nettoyage des textes avec NLP (suppression des stopwords, stemming, lemmatisation)  
 
-Ce projet évalue la performance de deux modèles de prédiction des rendements financiers : la Régression Linéaire et ARIMA. L'objectif est de comparer leurs performances à l'aide de métriques comme la MAE et le RMSE, tout en discutant des erreurs courantes et des pistes d'amélioration.
+📊 Feature Engineering
 
-## 1. Analyse des Performances
+Analyse de sentiment NLP (classification des articles en positif, neutre ou négatif)  
+Agrégation journalière du score Fear & Greed  
+Fusion avec les données du S&P 500 pour créer un dataset prêt à être modélisé  
 
-### Comparaison des Modèles
+📌 3. Modélisation Machine Learning
 
-#### Modèle 1 : Régression Linéaire
-- **MAE** : 0.0076
-- **RMSE** : 0.0099  
-  L'erreur absolue moyenne (MAE) et l'erreur quadratique moyenne (RMSE) montrent une performance stable. Cependant, la régression linéaire a du mal à capter les variations extrêmes des rendements.
+🛠️ Modèles testés :
 
-#### Modèle 2 : ARIMA
-- **MAE** : 0.0076
-- **RMSE** : 0.0099  
-  L'ARIMA génère des prévisions plus lissées et présente une précision directionnelle limitée à 46.36 %. Il est plus adapté pour des prévisions moyennes que pour capturer les fluctuations rapides.
+✅ XGBoost (modèle performant pour les séries temporelles)  
+✅ LSTM (Deep Learning) (pour capturer les tendances complexes du marché)  
+✅ Régression linéaire (benchmark simple)  
 
-### Interprétation des Résultats
+🎯 Évaluation des modèles
 
-Les graphiques suivants montrent que :
-- Les modèles reproduisent correctement les tendances générales des rendements.
-- Les erreurs sont plus prononcées lors des pics ou des retournements brusques.
+Comparaison des performances avec et sans l’indice Fear & Greed  
+Backtest sur des périodes historiques pour mesurer la fiabilité  
+Visualisation des prédictions avec Matplotlib & Seaborn  
 
-#### Visualisation
-- **Répartition des erreurs des deux modèles**.
-   - Pour le modèle de Regréssion linéaire :
-     ![Erreurs absolues Reg Linéaire](erreurs_absolues_linéaire.png)
-   - Pour le modèle ARIMA :
-     ![Erreurs absolues ARIMA](erreurs_absolues_arima.png)
-- **Superposition des prédictions avec les données réelles**. ( cf les deux graphes précédents où il y a la superpostion des prédictions avec les données réelles pour les deux modèles utilisés) 
+📌 4. Industrialisation & Déploiement
 
-## 2. Discussion sur les Erreurs Courantes
+🚀 Automatisation
+✅ Pipeline de collecte et transformation des données (ETL)
+✅ Mise à jour quotidienne des prédictions
 
-### Sources Potentielles d'Erreur
+📦 Containerisation & API
+✅ Docker pour garantir la portabilité du projet
+✅ FastAPI pour exposer les prédictions sous forme d’API
 
-- **Surajustement** : Les modèles peuvent avoir surappris les données d'entraînement, particulièrement l'ARIMA si l'ordre (p, d, q) n'est pas optimisé pour une bonne généralisation.
-- **Multicolinéarité** : Dans la régression linéaire, des variables explicatives fortement corrélées peuvent fausser les coefficients des variables.
-- **Endogénéité** : La dépendance des variables explicatives aux valeurs futures des rendements peut biaiser les résultats.
+☁️ Déploiement Cloud
+✅ CI/CD avec GitHub Actions (tests et mise en production automatisés)
+✅ Déploiement sur AWS / GCP / Azure (accessible en ligne)
 
-### Pistes d'Amélioration
-
-- **Réduction du surajustement** : Augmenter la taille des données ou utiliser des techniques de régularisation (par exemple, Ridge ou Lasso pour la régression linéaire).
-- **Gestion de la multicolinéarité** : Effectuer une sélection préalable des variables via une analyse de corrélation.
-- **Capturer les retournements** : Explorer des modèles non linéaires comme les réseaux neuronaux récurrents (RNN) ou des modèles basés sur des arbres comme Random Forest et XGBoost.
-
-## 3. Conclusion et Recommandations
-
-### Principales Conclusions
-
-- Les modèles linéaires simples (Régression Linéaire, ARIMA) offrent une bonne base pour prédire les rendements moyens, mais leur capacité à capturer les retournements rapides reste limitée.
-- L'ARIMA génère des prévisions lissées, tandis que la régression linéaire est plus influencée par les pics et fluctuations soudaines.
-
-### Recommandations
-
-#### Stratégies d'Investissement :
-- **Basées sur l'ARIMA** : Privilégier des positions à moyen terme pour capter les tendances générales.
-- **Basées sur la régression linéaire** : Utiliser les prédictions comme un indicateur secondaire pour confirmer les signaux d'achat/vente générés par d'autres outils.
-
-
-
-
+📊 Résultats et Insights
+📌 Corrélation entre le sentiment et le S&P 500
+📌 Amélioration de la précision du modèle avec l’analyse de sentiment
+📌 Détection de retournements de marché basés sur Fear & Greed
