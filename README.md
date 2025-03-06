@@ -41,13 +41,17 @@ Web Scraping pour récupérer des articles de presse ==> mots-clés : " S&P 500 
 Récupération uniquement des titres des articles et leurs liens url.    
 Nettoyage des textes avec NLP (suppression des stopwords, stemming, lemmatisation)    
 
+⚠️ Difficultés survenues : Collecte de nombreux tweets sur Reddit mais unqiuement les plus récents et donc impossible pour tester avec du Machine learning afin de prédire le prix. On pouvait récupérer que les 2 derniers jours.  
+
 📊 Feature Engineering
 
 Analyse de sentiment NLP : Scoring des titres d'articles pour créer notre index   
 Agrégation hebdomadaire du score Fear & Greed  
 Fusion avec les données du S&P 500 📥 [Télécharger le fichier Excel](https://github.com/votre-repo/votre-projet/blob/main/fichier.xlsx)
 pour créer un dataset prêt à être modélisé.
-Visualisation du prix du S&P500 avec le scoring créé.![Graphique du SP&500 et du scoring en fonction du temps](GraphiqueS&P-Fear&Greed.png)  
+Visualisation du prix du S&P500 avec le scoring créé.
+
+![Graphique du SP&500 et du scoring en fonction du temps](GraphiqueS&P-Fear&Greed.png)  
 
 📌 3. Modélisation Machine Learning
 
