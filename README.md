@@ -80,6 +80,45 @@ On a d'abord essayé de corréler les log des rendements du S&P500 et le scoring
 Comparaison des performances avec et sans l’indice Fear & Greed  
 
 Visualisation des prédictions avec Matplotlib & Seaborn  
+![Prédiction du S&P500 avec notre modèle](Prédiction_prix_S&P500.png)
+
+Cette prédiction est meilleure que le prix réel car il y a un manque d'information ce qui entache la précision. Si on fait un test de notre modèle on obtient : 
+
+## 2️⃣ Résultats du Modèle
+
+📌 Performance Générale
+
+Métrique	Valeur  
+Accuracy	52.65%  
+Macro Avg Precision	52%  
+Macro Avg Recall	51%  
+Macro Avg F1-Score	44%  
+
+📌 Rapport de Classification
+
+### 📊 Rapport de Classification
+
+| Classe | Précision | Rappel | F1-score | Support |
+|--------|------------|--------|-----------|---------|
+| **0 (Baisse du marché)** | 0.51 | **0.15** | 0.23 | 144 |
+| **1 (Hausse du marché)** | 0.53 | **0.87** | 0.66 | 158 |
+| **Global** | 0.52 | 0.51 | 0.44 | 302 |
+
+📌 Matrice de Confusion 
+
+### 🔎 Matrice de Confusion
+
+|   | Prédit **0** | Prédit **1** |
+|---|-------------|-------------|
+| **Réel 0** | 21 (✅ Vrais négatifs) | **123 (❌ Faux positifs)** |
+| **Réel 1** | **20 (❌ Faux négatifs)** | 138 (✅ Vrais positifs) |
+
+## 3️⃣ Analyse des Résultats
+
+🔴 Le modèle fait trop d’erreurs sur la classe 0 (baisse du marché) → Seulement 21 bonnes prédictions sur 144.  
+🟢 Il détecte bien la classe 1 (hausse du marché) avec 87% de recall, mais au prix d'un grand nombre de faux positifs.  
+⚠️ Problème principal : Déséquilibre du modèle, qui favorise excessivement la classe 1.  
+
 
 ## 📌 4. Déploiement et Conlusion
 
