@@ -115,9 +115,9 @@ Macro Avg F1-Score	51%
 
 ## 3️⃣ Analyse des Résultats
 
-🔴 Le modèle fait encore trop d’erreurs : 77 faux positifs, 69 faux négatifs
-🟢 Le modèle est équilibré entre les classes 
-⚠️ Problème principal : Le modèle ne capte pas encore bien les signaux du marché.
+🔴 Le modèle fait encore trop d’erreurs : 77 faux positifs, 69 faux négatifs  
+🟢 Le modèle est équilibré entre les classes   
+⚠️ Problème principal : Le modèle ne capte pas encore bien les signaux du marché.  
 
 ## 📌 4. Déploiement et Conlusion
 
