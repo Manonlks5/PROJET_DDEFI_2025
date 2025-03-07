@@ -47,7 +47,7 @@ Reddit API : Extraction des discussions financières sur r/wallstreetbets
 
 On remarque lors de pics forts de recherche du mot S&P500 la courbe du S&P500 a atteint un top de marché avant de chuter fortement. Il y a donc un premier lien fort entre la sentimentalité de marché et le prix du S&P500.
 
-[Télécharger le fichier Excel](SP500_Fear_Greed_Articles_finale.xlsx)
+[Télécharger le fichier Excel](google_trends_with_sp500.xlsx)
 
 
 ## 📌 2. Extraction & Prétraitement des Données
