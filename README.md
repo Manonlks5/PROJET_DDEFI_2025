@@ -47,7 +47,8 @@ Reddit API : Extraction des discussions financières sur r/wallstreetbets
 
 Web Scraping pour récupérer des articles de presse ==> mots-clés : " S&P 500 " pour collecter les articles pouvant influencer son prix
 [Télécharger le fichier Excel](SP500_Fear_Greed_Articles_finale.xlsx)
-Récupération uniquement des titres des articles et leurs liens url.    
+Récupération uniquement des titres des articles et leurs liens url.   
+==> Catégorisation des articles en Fear, Greed ou Neutral grâce à des mots-clés.  
 Nettoyage des textes avec NLP (suppression des stopwords, stemming, lemmatisation)    
 
 ⚠️ Difficultés survenues : Collecte de nombreux tweets sur Reddit mais unqiuement les plus récents et donc impossible pour tester avec du Machine learning afin de prédire le prix. On pouvait récupérer que les 2 derniers jours.  
