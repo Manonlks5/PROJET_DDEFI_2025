@@ -43,6 +43,9 @@ Reddit API : Extraction des discussions financières sur r/wallstreetbets
 
 ## 1ère approche Google Trends :  
 
+![Google_Trends_S&P500](GoogleTrends.png)
+
+
 
 ## 📌 2. Extraction & Prétraitement des Données
 
