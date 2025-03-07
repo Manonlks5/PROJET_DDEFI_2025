@@ -150,3 +150,7 @@ Collecte de beaucoup plus d'articles afin d'augmenter en précision et pour test
 📌 Détection de retournements de marché basés sur Fear & Greed  
 
 La principale utilité est donc la détection de retournement de marché, surtout quand l'indice Fear&Greed est fort ( dans les deux sens, peur ou cupidité). C'est donc un indicateur majeur pour les banques,traders,fonds d'investissements pour savoir à quel moment acheter ou vendre. 
+
+
+## ANNEXES 
+Vous pouvez voir le code python en détail afin de le tester en ayant bien ajouté toutes les bibliothèques fournies. Attention la récolte de données peut prendre du temps, surtout celle testée sur Reddit.
