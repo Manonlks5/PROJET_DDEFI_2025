@@ -84,11 +84,22 @@ Visualisation des prédictions avec Matplotlib & Seaborn
 ## 📌 4. Déploiement et Conlusion
 
 🚀 Automatisation
-✅ Pipeline de collecte et transformation des données (ETL)
-✅ Mise à jour quotidienne des prédictions
+
+✅ Pipeline de collecte et transformation des données (ETL)  
+✅ Mise à jour quotidienne des prédictions  
 
 
 📊 Résultats et Insights
-📌 Corrélation entre le sentiment et le S&P 500
-📌 Amélioration de la précision du modèle avec l’analyse de sentiment
-📌 Détection de retournements de marché basés sur Fear & Greed
+
+📌 Corrélation entre le sentiment et le S&P 500 
+
+Il y a une certaine forme de décorrélation entre l'indice Fear&Greed et le cours du S&P500 dans les mouvements à hautes volatilités car la cupidité ou la peur deviennent extrêmes et le cours va se retourner et commencer à chuter.  
+Par contre sur des ranges du S&P500 les deux indices sont corrélés. 
+
+📌 Amélioration de la précision du modèle avec l’analyse de sentiment  
+
+Collecte de beaucoup plus d'articles afin d'augmenter en précision et pour tester plus correctement notre ML. Créer un poids spécifique par articles en fonction de leur popularité afin d'avoir une meilleure représentation de l'index et du sentiment générale de marché. Par exemple si le New York Times plublie un article positif sur le S&P500 on sera sûrement sur de la cupidité extrême.
+
+📌 Détection de retournements de marché basés sur Fear & Greed  
+
+Principal utilité est donc cette détection de retournement surtout quand l'indice Fear&Greed est fort ( dans les deux sens, peur ou cupidité). C'est donc un indicateur majeur pour les banques,trader,fonds pour savoir à quel moment acheter ou vendre. 
