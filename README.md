@@ -6,7 +6,7 @@ Dans un marché financier en constante évolution, comprendre le sentiment des i
 Ce projet a pour but de créer un indice Fear & Greed basé sur des sources variées (actualités, Reddit, Google Trends, etc.) et de l’intégrer dans un modèle Machine Learning pour améliorer les prévisions du S&P 500.
 Cet indice a pour but de prévoir des mouvements de retournements potentiels du marché. En effet, une peur extrême indique souvent une sous-évaluation des actifs et donc des opportunités d'achat. Au contraire, une cupidité excessive suggère un marché suracheté et donc un potentiel retournement baissier. 
 
-💼 À qui s'adresse TrendX ?
+## 💼 À qui s'adresse TrendX ?
 
 📌 Fonds d’investissement & Hedge Funds – Pour affiner leurs stratégies basées sur l'analyse de sentiment  
 📌 Traders indépendants & Analystes – Pour anticiper les tendances du S&P 500 grâce à l’IA  
@@ -14,7 +14,7 @@ Cet indice a pour but de prévoir des mouvements de retournements potentiels du 
 
 ---
 
-🎯 Objectifs du Projet
+## 🎯 Objectifs du Projet
 
 ✅ Développer un indice Fear & Greed personnalisé à partir de données d'actualités et de médias sociaux
 
@@ -41,7 +41,7 @@ Twitter API (si possible) : Extraction des tweets mentionnant le S&P 500, bloqu�
 collecter les données.   
 Reddit API : Extraction des discussions financières sur r/wallstreetbets   
 
-📌 2. Extraction & Prétraitement des Données
+## 📌 2. Extraction & Prétraitement des Données
 
 📥 Collecte
 
@@ -63,7 +63,7 @@ Visualisation du prix du S&P500 avec le scoring créé.
 
 ![Graphique du SP&500 et du scoring en fonction du temps](GraphiqueS&P-Fear&Greed.png)  
 
-📌 3. Modélisation Machine Learning
+## 📌 3. Modélisation Machine Learning
 
 🛠️ Modèles testés :
 
@@ -81,7 +81,7 @@ Comparaison des performances avec et sans l’indice Fear & Greed
 
 Visualisation des prédictions avec Matplotlib & Seaborn  
 
-📌 4. Déploiement et Conlusion
+## 📌 4. Déploiement et Conlusion
 
 🚀 Automatisation
 ✅ Pipeline de collecte et transformation des données (ETL)
