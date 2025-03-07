@@ -102,4 +102,4 @@ Collecte de beaucoup plus d'articles afin d'augmenter en précision et pour test
 
 📌 Détection de retournements de marché basés sur Fear & Greed  
 
-Principal utilité est donc cette détection de retournement surtout quand l'indice Fear&Greed est fort ( dans les deux sens, peur ou cupidité). C'est donc un indicateur majeur pour les banques,trader,fonds pour savoir à quel moment acheter ou vendre. 
+La principale utilité est donc la détection de retournement de marché, surtout quand l'indice Fear&Greed est fort ( dans les deux sens, peur ou cupidité). C'est donc un indicateur majeur pour les banques,traders,fonds d'investissements pour savoir à quel moment acheter ou vendre. 
