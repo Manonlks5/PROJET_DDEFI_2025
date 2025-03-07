@@ -41,6 +41,9 @@ Twitter API (si possible) : Extraction des tweets mentionnant le S&P 500, bloqu�
 collecter les données.   
 Reddit API : Extraction des discussions financières sur r/wallstreetbets   
 
+## 1ère approche Google Trends :  
+
+
 ## 📌 2. Extraction & Prétraitement des Données
 
 📥 Collecte
